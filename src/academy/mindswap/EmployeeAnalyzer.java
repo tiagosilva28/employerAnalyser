@@ -63,6 +63,7 @@ public class EmployeeAnalyzer {
 
     public List<String> findCommonNames(List<Employee> firstDepartment, List<Employee> secondDepartment) {
         //counter para os nomes e comparar o que aparece mais
+        //aa
 
         List<String> result = firstDepartment.stream()
                 .filter(two -> secondDepartment.stream()
