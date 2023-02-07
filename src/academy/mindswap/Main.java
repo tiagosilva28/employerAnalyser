@@ -7,6 +7,7 @@ public class Main {
 
 
         EmployeeAnalyzer employeeAnalyzer = new EmployeeAnalyzer();
+        System.out.println("aaaaa");
 
         System.out.println("-".repeat(100));
         System.out.println("EmployeeAnalyzer.countEmployees() = " + employeeAnalyzer.countEmployees(DB.getDevelopmentDepartment(), 7));
