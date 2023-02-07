@@ -22,10 +22,11 @@ public class EmployeeAnalyzer {
 
     public List<String> findEmployeeBySalary(List<Employee> employees, int salary) {
 
+       //Arrays.stream(employeeStream);
         Stream<Employee> employeeStream = employees.stream();
-       // Arrays.stream(employeeStream)
+        ArrayList<String> SalaryCheck = employeeStream.filter(employee -> employee.getSalary() == salary).forEach(System.out::println);
 
-        System.out.println(employeeStream);
+        System.out.println();
 
 
 
