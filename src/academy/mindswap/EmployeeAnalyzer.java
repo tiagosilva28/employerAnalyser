@@ -22,15 +22,10 @@ public class EmployeeAnalyzer {
 
     public List<String> findEmployeeBySalary(List<Employee> employees, int salary) {
 
-       //Arrays.stream(employeeStream);
-        Stream<Employee> employeeStream = employees.stream();
-        ArrayList<String> SalaryCheck = employeeStream.filter(employee -> employee.getSalary() == salary).forEach(System.out::println);
-
-        System.out.println();
-
-
-
-        return new ArrayList<>();
+        return employees.stream()
+                .filter(employee -> employee.getSalary() == salary)
+                .map(employee -> employee.getFirstName()+" "+ employee.getLastname())
+                .collect(Collectors.toList());  //muito importante para acabar o exercicio
     }
 
     public List<Employee> findOldestEmployees(List<Employee> employees, int numberOfEmployees) {
