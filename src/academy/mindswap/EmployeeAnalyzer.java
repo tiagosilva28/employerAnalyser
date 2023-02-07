@@ -25,6 +25,7 @@ public class EmployeeAnalyzer {
         Stream<Employee> employeeStream = employees.stream();
        // Arrays.stream(employeeStream)
 
+        System.out.println(employeeStream);
 
 
 
