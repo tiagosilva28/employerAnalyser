@@ -24,21 +24,16 @@ public class EmployeeAnalyzer {
 
         return employees.stream()
                 .filter(employee -> employee.getSalary() >= salary)
-                .map(employee -> employee.getFirstName()+" "+ employee.getLastname())
+                .map(employee -> employee.getFirstName()+ " " + employee.getLastname())
                 .collect(Collectors.toList());  //muito importante para acabar o exercicio
     }
 
     public List<String> findOldestEmployees(List<Employee> employees, int numberOfEmployees) {
 
-        /* List<Employee> result = employees.stream()
+        return employees.stream()
                 .map(employee -> employee.getFirstName()+" "+ employee.getLastname())
                 .sorted()
-                .collect(Collectors.toList());
-        return
-         */
-        return employees.stream()
-                .filter(employee -> employee.getStartingYear() >= numberOfEmployees)
-                .map(employee -> employee.getFirstName()+" "+ employee.getLastname())
+                .limit(numberOfEmployees)
                 .collect(Collectors.toList());
     }
 
