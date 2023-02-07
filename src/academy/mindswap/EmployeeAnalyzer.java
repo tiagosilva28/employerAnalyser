@@ -23,26 +23,45 @@ public class EmployeeAnalyzer {
     public List<String> findEmployeeBySalary(List<Employee> employees, int salary) {
 
         return employees.stream()
-                .filter(employee -> employee.getSalary() == salary)
+                .filter(employee -> employee.getSalary() >= salary)
                 .map(employee -> employee.getFirstName()+" "+ employee.getLastname())
                 .collect(Collectors.toList());  //muito importante para acabar o exercicio
     }
 
-    public List<Employee> findOldestEmployees(List<Employee> employees, int numberOfEmployees) {
-        return  new ArrayList<>();
+    public List<String> findOldestEmployees(List<Employee> employees, int numberOfEmployees) {
+
+        /* List<Employee> result = employees.stream()
+                .map(employee -> employee.getFirstName()+" "+ employee.getLastname())
+                .sorted()
+                .collect(Collectors.toList());
+        return
+         */
+        return employees.stream()
+                .filter(employee -> employee.getStartingYear() >= numberOfEmployees)
+                .map(employee -> employee.getFirstName()+" "+ employee.getLastname())
+                .collect(Collectors.toList());
     }
 
     public Optional<Employee> findFirstEmployeeByAge(List<Employee> employees, int age) {
+        //temos que filtrar do grupo empregado mais antigo o mais velho.
 
 
         return Optional.empty();
     }
 
     public Double findAverageSalary(List<Employee> employees) {
+        //salario medio por departamento.
+
         return 0.0;
     }
 
     public List<String> findCommonNames(List<Employee> firstDepartment, List<Employee> secondDepartment) {
+        //counter para os nomes e comparar o que aparece mais
+
+        /*ong count = Arrays.stream(tongueTwister.split("\\W+"))
+                .count();
+
+         */
 
 
         return new ArrayList<>();
