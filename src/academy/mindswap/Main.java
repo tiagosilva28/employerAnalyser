@@ -14,7 +14,7 @@ public class Main {
         System.out.println("-".repeat(100));
         System.out.println("EmployeeAnalyzer.findOldestEmployees() = " + employeeAnalyzer.findOldestEmployees(DB.getMarketingDepartment(), 3));
         System.out.println("-".repeat(100));
-        System.out.println("EmployeeAnalyzer.findFirstEmployeeByAge() = " + employeeAnalyzer.findFirstEmployeeByAge(DB.getDevelopmentDepartment(), 40));
+        System.out.println("EmployeeAnalyzer.findFirstEmployeeByAge() = " + employeeAnalyzer.findFirstEmployeeByAge(DB.getDevelopmentDepartment(), 48));
         System.out.println("-".repeat(100));
         System.out.println("EmployeeAnalyzer.findAverageSalary() = " + employeeAnalyzer.findAverageSalary(DB.getSalesDepartment()));
         System.out.println("-".repeat(100));
