@@ -31,10 +31,10 @@ public class EmployeeAnalyzer {
     public List<String> findOldestEmployees(List<Employee> employees, int numberOfEmployees) {
 
         return employees.stream()
+                .sorted(Comparator.comparingInt(Employee::getAge).reversed())
                 .map(employee -> employee.getFirstName()+" "+ employee.getLastname())
-                .sorted()
                 .limit(numberOfEmployees)
-                .collect(Collectors.toList());
+                .collect(Collectors.toList()); // Como mudar para returnar uma List<Employee>
     }
 
     public Optional<Employee> findFirstEmployeeByAge(List<Employee> employees, int age) {
