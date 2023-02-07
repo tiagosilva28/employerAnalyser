@@ -23,7 +23,7 @@ public class EmployeeAnalyzer {
     public List<String> findEmployeeBySalary(List<Employee> employees, int salary) {
 
         Stream<Employee> employeeStream = employees.stream();
-        Arrays.stream(employeeStream)
+       // Arrays.stream(employeeStream)
 
 
 
